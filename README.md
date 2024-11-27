@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# RBAC System
+A Role-Based Access Control (RBAC) System implemented in ReactJS to manage user roles and permissions effectively. This project allows users to sign up, log in, and view their role-based access. Admin users can manage other users by toggling roles or deleting them, while viewers have restricted access.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+### Authentication:
 
-## Available Scripts
+- Users can sign up or log in with their credentials.
+- Role-based dashboard for **Admin** and **Viewer** roles.
+### Admin Dashboard:
 
-In the project directory, you can run:
+- View all registered users.
+- Toggle user roles (Admin <-> Viewer).
+- Delete users from the system.
+### Viewer Dashboard:
 
-### `npm start`
+- Access to a read-only table of registered users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Tech Stack
+- **Frontend:** ReactJS, CSS (for styling).
+- **State Management:** React Context API.
+# Getting Started
+## Prerequisites
+Ensure you have the following installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Node.js** (v14 or higher)
+- **npm**
+## Installation
+1. ### Clone the repository:
 
-### `npm test`
+``` bash
+git clone https://github.com/UjjawalShakya/rbac-system.git
+cd rbac-system
+```
+2. ### Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+``` bash
+npm install
+```
+3. ### Start the development server:
 
-### `npm run build`
+``` bash
+npm start
+``` 
+4. ### Open the app in your browser:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The app will run at http://localhost:3000.
+# File Structure
+```
+src/
+├── components/
+│   ├── AuthForm.js      # Login and signup component
+│   ├── Dashboard.js     # Admin dashboard component
+├── context/
+│   ├── UserContext.js   # Context API for managing state
+├── styles/
+│   ├── styles.css       # Custom CSS for navbar and table
+├── App.js               # Main application entry point
+├── index.js             # React DOM rendering
+```
+# Usage
+### Sign Up:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Users can sign up by providing a name, user ID, and password.
+- All new users are assigned the "Viewer" role by default.
+### Admin Role:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Admin users can view all signed-up users in a table.
+- Admins have the ability to toggle roles and delete users.
+### Viewer Role:
 
-### `npm run eject`
+- Viewers can log in and see a list of all users but cannot modify any data.
+# Screenshots
+## Admin Dashboard
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Viewer Dashboard
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Future Enhancements
+- Add server-side integration (e.g., Node.js/Express backend).
+- Add user profile management.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Author
+Developed by **Ujjawal Shakya**
+Feel free to connect on [LinkedIn](https://www.linkedin.com/in/ujjawal-shakya-67aa32242/) for collaboration opportunities!
